@@ -4,7 +4,7 @@ const second = 1000,
   day = hour * 24;
 
 
-let countDown = new Date('Mar 14, 2020 00:00:00').getTime();
+let countDown = new Date('Mar 27, 2020 00:00:00').getTime();
 let now = new Date().getTime(),
   distance = countDown - now;
   if (Math.floor(distance / (day)) <= 0
