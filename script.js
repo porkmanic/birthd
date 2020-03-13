@@ -30,5 +30,5 @@ function x () {
   //}
 
 }
-x()
+window.onload = x
 setInterval(x,second)
