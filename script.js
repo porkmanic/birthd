@@ -21,6 +21,7 @@ if (gongBirth.getTime() + day <= now1.getTime()) {
 let countDown = gongBirth.getTime();
 function x () {
 
+  document.getElementById('tt').innerText = "第" + (gongBirth.getFullYear() - 1993) + "个非常重要的倒计时:"
   let now = new Date().getTime(),
     distance = countDown - now;
 
