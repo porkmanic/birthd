@@ -10,11 +10,11 @@ let now1 = new Date()
 let lnow = calendar.solar2lunar(now1.getFullYear(),now1.getMonth(),now1.getDate());
 // 生日公历
 let lbj = calendar.lunar2solar(lnow.lYear,lmonth,lday)
-let gongBirth = new Date(lbj.date)
+let gongBirth = new Date(lbj.cYear, lbj.cMonth - 1, lbj.cDay)
 // 公历生日加一天 超过了 下一年为基准
 if (gongBirth.getTime() + day <= now1.getTime()) {
   lbj = calendar.lunar2solar(lnow.lYear + 1,lmonth,lday)
-  gongBirth = new Date(lbj.date)
+  gongBirth = new Date(lbj.cYear, lbj.cMonth - 1, lbj.cDay)
 } else if (now1.getTime() - gongBirth.getTime() > 0 && now1.getTime() - gongBirth.getTime() < day) {
   window.location.href="https://porkmanic.github.io/birthd/2/";
 }
